@@ -1,5 +1,8 @@
 name: Build And Release Image
-on: [ workflow_dispatch ]
+on:
+  push:
+    tags:
+      - 'v*'
 jobs:
   image:
     runs-on: ubuntu-latest
